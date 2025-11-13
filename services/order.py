@@ -14,8 +14,7 @@ def create_order(tickets: list[dict], username: str,
 
     if date is not None:
         user_order.created_at = date
-
-    user_order.save()
+        user_order.save()
 
     for ticket in tickets:
         Ticket.objects.create(order=user_order,
